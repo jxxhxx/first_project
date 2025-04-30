@@ -1,0 +1,168 @@
+.search-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem; /* 버튼, 입력창, 셀렉트 사이 간격 동일하게 */
+  margin: 2rem 0;
+}
+
+.search-box input {
+  padding: 10px;
+  font-size: 1rem;
+  min-width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.search-box select {
+  padding: 10px 16px;
+  font-size: 1rem;
+  min-width: 160px;
+  border-radius: 6px;
+}
+
+.search-box button {
+  background-color: #ff0000;
+  color: white;
+  padding: 10px 16px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.search-box button:hover {
+  background-color: #683f3f;
+}
+.movie-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.movie-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* 제목과 리뷰가 고르게 배치되도록 */
+  align-items: center;
+  border: 1px solid #ddd;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 20px; /* 추가적인 여백으로 간격을 맞춤 */
+}
+
+.movie-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1; /* 남은 공간을 차지하도록 설정 */
+  width: 100%;
+}
+
+.movie-info h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.movie-info p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.4;
+  margin: 8px 0;
+  max-height: calc(1.4em * 3);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.movie-item .review-section {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  padding-top: 10px;
+  border-top: 1px solid #ddd;
+}
+
+.movie-item .review-section textarea {
+  width: 350px;
+  height: 100px;
+  padding: 5px;
+  font-size: 0.9rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  resize: none;
+}
+
+.movie-item .review-section button {
+  background-color: #ff0000;
+  color: white;
+  padding: 8px 12px;
+  font-size: 16px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.movie-item .review-section button:hover {
+  background-color: #ff0000;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.pagination button {
+  padding: 0.5rem 1rem;
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: background-color 0.3s, opacity 0.3s;
+  margin: 0 5px;
+}
+
+.pagination button:hover {
+  opacity: 1;
+}
+
+.pagination button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.pagination button.active {
+  background-color: #ff0000;
+  font-weight: bold;
+  opacity: 1;
+}
+.top-button {
+  position: fixed;
+  bottom: 40px;
+  right: 30px;
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 1000;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.top-button:hover {
+  opacity: 1;
+}

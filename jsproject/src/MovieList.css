@@ -1,0 +1,150 @@
+body {
+  background-color: #000; /* 전체 배경 어둡게 */
+  color: #fff;
+}
+
+.movie-item {
+  background-color: #111; /* 카드 배경 어둡게 */
+  border: 1px solid #3bb5b2;
+  color: #fff;
+}
+
+.poster {
+  background-color: #222; /* 포스터 로딩 배경 어둡게 */
+}
+
+.movie-info h3 {
+  color: #fff;
+}
+
+.movie-info h3::after {
+  background-color: #3bb5b2; /* 밑줄 색상 */
+}
+
+.movie-info p {
+  color: #fff; /* 설명 텍스트 밝은 회색 */
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.movie-container {
+  display: flex;
+  flex-wrap: wrap; /* 여러 행에 걸쳐 요소 배치 */
+  gap: 1.5rem;
+  padding: 1rem;
+  max-width: 925px;
+  margin: 0 auto;
+}
+
+.movie-item {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #3bb5b2;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  overflow: hidden;
+  width: calc(50% - 1.5rem); /* 2개의 열을 만들기 위한 너비 계산 */
+  min-height: 460px; /* 최소 높이 설정 */
+}
+
+.poster {
+  width: 100%;
+  height: 260px;
+  object-fit: contain;
+  display: block;
+  background-color: #eee;
+}
+
+.movie-info h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #222;
+  text-align: center;
+  position: relative;
+  width: 100%;
+}
+
+.movie-info h3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 2px;
+}
+
+.movie-info {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 160px;
+  justify-content: flex-start;
+}
+.movie-info p {
+  font-size: 0.85rem;
+  color: #555;
+  line-height: 1.4;
+  text-overflow: ellipsis;
+  display: block;
+  margin: 30px;
+  max-height: 5.5rem;
+  text-align: center;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.pagination button {
+  padding: 0.5rem 1rem;
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: background-color 0.3s, opacity 0.3s;
+  margin: 0 5px;
+}
+
+.pagination button:hover {
+  opacity: 1;
+}
+
+.pagination button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.pagination button.active {
+  background-color: #ff0000;
+  font-weight: bold;
+  opacity: 1;
+}
+.top-button {
+  position: fixed;
+  bottom: 40px;
+  right: 30px;
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 1000;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.top-button:hover {
+  opacity: 1;
+}

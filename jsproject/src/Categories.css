@@ -1,0 +1,83 @@
+.styled-categories-block {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  width: 768px;
+  margin: 0 auto;
+  position: relative;
+  justify-content: center; /* 메뉴를 수평 중앙 정렬 */
+}
+
+.category-group {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-right: 2rem;
+  justify-content: center; /* 카테고리 항목들을 중앙으로 정렬 */
+}
+
+.category {
+  font-size: 1.125rem;
+  cursor: pointer;
+  white-space: pre;
+  text-decoration: none;
+  color: inherit;
+  padding-bottom: 0.25rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.category.active {
+  font-weight: 600;
+  border-bottom: 2px solid #ff0000;
+  color: #ffffff;
+}
+
+.category.active:hover {
+  color: #ff0000;
+}
+
+.search-icon {
+  font-size: 1.25rem;
+}
+
+.genre-hover {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+}
+
+.genre-hover:hover .genre-list {
+  display: flex;
+}
+
+.genre-list {
+  display: none;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  min-width: 400px;
+}
+
+.genre-list div {
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.genre-list div.active {
+  background-color: #ff0000;
+  color: white;
+}
